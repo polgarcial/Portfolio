@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Pol</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome CDN for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Google Fonts - Enlazar una fuente (ej: Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Portfolio Pol</h1>
+        <nav>
+          <ul>
+            <li><a href="#recent-works">Works</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="hero">
+      <div class="container">
+        <img src="images/profile-photo.png" alt="Pol" class="profile-photo" />
+        <h2>Hi, Im Pol</h2>
+        <p>I am a Web Developer</p>
+        <div class="social-links">
+          <a href="https://github.com/polgarcial"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/polgarcial"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <div class="scroll-indicator">
+          <!-- Puede ser un icono o simple indicador -->
+          <span>&#x2022;&#x2022;&#x2022;</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="what-i-do">
+      <div class="container">
+        <h2>What I do</h2>
+        <div class="skills-container">
+          <div class="frontend">
+            <h3>Frontend Development</h3>
+            <div class="icons">
+              <!-- Iconos de frontend (solo Font Awesome) -->
+              <i class="fab fa-css3"></i>
+              <!-- CSS Shield -->
+              <i class="fab fa-js-square"></i>
+              <!-- JS Square -->
+              <i class="fab fa-react"></i>
+              <!-- React -->
+              <i class="fab fa-html5"></i>
+              <!-- HTML5 Shield -->
+              <i class="fab fa-git-alt"></i>
+              <!-- Git Diamond/Branches -->
+              <i class="fab fa-github"></i>
+              <!-- GitHub Logo -->
+              <i class="fab fa-figma"></i>
+              <!-- Figma -->
+            </div>
+            <ul>
+              <li>
+                Developing high-performance web applications using modern tools
+                like Vite, ESLint, and Figma.
+              </li>
+              <li>
+                Designing scalable and maintainable frontends with React and
+                component-based architecture.
+              </li>
+              <li>Building responsive Web Applications.</li>
+            </ul>
+          </div>
+          <div class="backend">
+            <h3>Backend Development</h3>
+            <div class="icons">
+              <!-- Iconos de backend (solo Font Awesome) -->
+              <i class="fab fa-python"></i>
+              <!-- Python -->
+              <i class="fab fa-docker"></i>
+              <!-- Docker -->
+              <i class="fab fa-laravel"></i>
+              <!-- Laravel -->
+              <i class="fab fa-php"></i>
+              <!-- PHP -->
+            </div>
+            <ul>
+              <li>
+                Developing scalable backend services and RESTful APIs using
+                Python.
+              </li>
+              <li>
+                Containerizing applications and managing environments using
+                Docker.
+              </li>
+              <li>
+                Working with relational and non-relational databases such as
+                PostgreSQL, MySQL and MongoDB
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="quote">
+          Two things are infinite, the universe and human stupidity
+        </p>
+        <!-- Podrías añadir una línea decorativa si lo deseas -->
+      </div>
+    </section>
+
+    <section id="recent-works">
+      <div class="container">
+        <h2>Recent Works</h2>
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+          <button class="filter-btn" data-filter="opensource">
+            Open Source
+          </button>
+        </div>
+        <div class="projects-grid">
+          <!-- Proyectos añadidos según las capturas -->
+
+          <!-- Proyecto 1: Salutia -->
+          <div class="project-card fullstack">
+            <img src="images/Salutia.png" alt="Salutia" />
+            <h3>Salutia</h3>
+            <p>
+              The smart platform to manage your medical appointments quickly and
+              efficiently
+            </p>
+            <div class="project-icons">
+              <!-- Iconos de tecnologías para Salutia (Font Awesome) -->
+              <i class="fab fa-html5"></i>
+              <i class="fab fa-css3"></i>
+              <i class="fab fa-js-square"></i>
+              <i class="fab fa-react"></i>
+              <!-- Icono 'HS' no estándar -->
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/polgarcial/salutia" target="_blank"
+                ><i class="fab fa-github"></i> GitHub</a
+              >
+              <a href="#" target="_blank"
+                ><i class="fas fa-external-link-alt"></i> Demo</a
+              >
+            </div>
+          </div>
+
+          <!-- Proyecto 2: LearnFi -->
+          <div class="project-card fullstack">
+            <img src="images/LearnFi.png" alt="LearnFi" />
+            <h3>LearnFi</h3>
+            <p>
+              Gamified learning platform. Practice backend development with
+              Laravel + JS
+            </p>
+            <div class="project-icons">
+              <!-- Iconos de tecnologías para LearnFi (Font Awesome) -->
+              <i class="fab fa-html5"></i>
+              <i class="fab fa-css3"></i>
+              <i class="fab fa-js-square"></i>
+              <i class="fab fa-laravel"></i>
+              <i class="fab fa-php"></i>
+              <!-- Icono Elephant/PostgreSQL no estándar -->
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/danimarce/LearnFi" target="_blank"
+                ><i class="fab fa-github"></i> GitHub</a
+              >
+              <a href="#" target="_blank"
+                ><i class="fas fa-external-link-alt"></i> Demo</a
+              >
+            </div>
+          </div>
+
+          <!-- Proyecto 3: Travel Agency -->
+          <div class="project-card fullstack">
+            <img src="images/travel-agency.png" alt="Travel Agency" />
+            <h3>Travel Agency</h3>
+            <p>
+              The e-commerce to buy kitchen related items. College final year
+              project base on Servlets and JSP (Java)
+            </p>
+            <div class="project-icons">
+              <!-- Iconos de tecnologías para Travel Agency (Font Awesome) -->
+              <i class="fab fa-html5"></i>
+              <i class="fab fa-css3"></i>
+              <i class="fab fa-js-square"></i>
+              <i class="fab fa-node-js"></i>
+              <!-- Icono Express.js no estándar -->
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/danimarce/travel-agency"
+                target="_blank"
+                ><i class="fab fa-github"></i> GitHub</a
+              >
+              <a href="https://travel-agency-g01f.onrender.com/" target="_blank"
+                ><i class="fas fa-external-link-alt"></i> Demo</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Get in Touch</h2>
+        <p>
+          I'm actively looking for any new opportunities, my inbox is always
+          open. Whether you have a question or want to hire me or just want to
+          say hello, I'll try my best to get back to you!
+        </p>
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="Full Name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="email@example.com"
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              required
+              placeholder="Hello Pol,"
+            ></textarea>
+          </div>
+          <button type="submit">Send <i class="fas fa-paper-plane"></i></button>
+          <!-- Icono de avión de papel -->
+        </form>
+        <div class="contact-info">
+          <p><i class="fas fa-envelope"></i>polgarcial@yahoo.es</p>
+          <!-- Icono de sobre -->
+          <p><i class="fas fa-map-marker-alt"></i> Barcelona, Spain</p>
+          <!-- Icono de ubicación -->
+          <div class="social-links">
+            <a href="https://www.instagram.com/polgarcia_13/"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/polgarcial"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <!-- Iconos de redes sociales -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

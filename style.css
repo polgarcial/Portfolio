@@ -1,0 +1,542 @@
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #3b82f6;
+  --background-dark: #0f172a;
+  --background-light: #1e293b;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --accent-color: #60a5fa;
+  --card-background: #1e293b;
+  --transition-speed: 0.3s;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif; /* Usar la fuente de Google Fonts */
+  background-color: var(
+    --background-dark
+  ); /* Color de fondo oscuro similar al de la captura */
+  color: var(--text-primary); /* Color de texto blanco */
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px; /* O un ancho máximo adecuado */
+}
+
+header {
+  background-color: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-family: "Inter", sans-serif; /* Usar la misma fuente para los encabezados */
+  color: #ffffff; /* Asegurarse de que los títulos sean blancos */
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header nav ul li {
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+#hero {
+  text-align: center;
+  padding: 100px 0; /* Espacio para que el contenido no quede debajo de la cabecera fija */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Para que ocupe al menos toda la altura de la ventana */
+}
+
+.profile-photo {
+  width: 150px; /* Ajusta el tamaño según necesites */
+  height: 150px; /* Ajusta el tamaño según necesites */
+  border-radius: 50%; /* Para hacerla redonda */
+  margin-bottom: 20px;
+}
+
+#hero h2 {
+  margin: 10px 0;
+  font-size: 2.5rem;
+  font-family: "Inter", sans-serif; /* Usar la misma fuente para los encabezados */
+  color: #ffffff; /* Asegurarse de que los títulos sean blancos */
+}
+
+#hero p {
+  margin: 5px 0 20px 0;
+  font-size: 1.2rem;
+}
+
+.social-links a {
+  margin: 0 10px;
+  display: inline-block; /* Para que los enlaces de iconos se muestren en línea */
+}
+
+.social-links img {
+  width: 30px; /* Ajusta el tamaño de los iconos */
+  height: 30px; /* Ajusta el tamaño de los iconos */
+}
+
+.social-links i.fab,
+.social-links i.fas {
+  font-size: 1.5rem; /* Ajusta el tamaño de los iconos de Font Awesome */
+  color: #ffffff; /* Color de los iconos, ajusta si es necesario */
+  transition: color 0.3s ease; /* Transición suave al pasar el ratón */
+}
+
+.social-links a:hover i.fab,
+.social-links a:hover i.fas {
+  color: var(--accent-color);
+  transform: translateY(-3px);
+}
+
+.scroll-indicator {
+  margin-top: 50px; /* Espacio entre los iconos y el indicador */
+  font-size: 2rem;
+}
+
+#what-i-do {
+  padding: 100px 0;
+  background-color: var(--background-dark);
+  position: relative;
+}
+
+#what-i-do::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--primary-color),
+    transparent
+  );
+}
+
+#what-i-do h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  font-family: "Inter", sans-serif; /* Usar la misma fuente para los encabezados */
+  color: #ffffff; /* Asegurarse de que los títulos sean blancos */
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 3rem;
+}
+
+.skills-container .frontend,
+.skills-container .backend {
+  background-color: var(--card-background);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform var(--transition-speed) ease;
+}
+
+.skills-container .frontend:hover,
+.skills-container .backend:hover {
+  transform: translateY(-5px);
+}
+
+.skills-container h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.skills-container h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  border-radius: 2px;
+}
+
+.skills-container .icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.skills-container .icons i {
+  font-size: 2rem;
+  color: var(--text-primary);
+  transition: all var(--transition-speed) ease;
+}
+
+.skills-container .icons i:hover {
+  color: var(--accent-color);
+  transform: scale(1.1);
+}
+
+.skills-container ul li {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+  color: var(--text-secondary);
+}
+
+.skills-container ul li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+}
+
+.quote {
+  margin-top: 4rem;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  padding: 1rem;
+}
+
+.quote::before,
+.quote::after {
+  content: '"';
+  font-size: 2rem;
+  color: var(--primary-color);
+  position: absolute;
+}
+
+.quote::before {
+  left: 0;
+  top: -1rem;
+}
+
+.quote::after {
+  right: 0;
+  bottom: -1rem;
+}
+
+#recent-works {
+  padding: 80px 0;
+  text-align: center;
+  background-color: #1a1a2e; /* O el color de fondo que corresponda */
+}
+
+#recent-works h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.filters {
+  margin-bottom: 40px;
+}
+
+.filter-btn {
+  background-color: var(--background-light);
+  color: var(--text-primary);
+  border: none;
+  padding: 12px 24px;
+  margin: 0 8px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all var(--transition-speed) ease;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+}
+
+.filter-btn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--primary-color);
+  transition: all var(--transition-speed) ease;
+  transform: translateX(-50%);
+}
+
+.filter-btn:hover::after {
+  width: 80%;
+}
+
+.filter-btn.active::after {
+  width: 100%;
+  background: var(--accent-color);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Columnas responsivas */
+  gap: 30px; /* Espacio entre las tarjetas de proyecto */
+}
+
+.project-card {
+  background-color: var(--card-background);
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: left;
+  transition: transform var(--transition-speed) ease,
+    box-shadow var(--transition-speed) ease, opacity 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding-bottom: 20px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px; /* Altura fija para las imágenes de proyecto, ajusta si es necesario */
+  object-fit: cover; /* Para que la imagen cubra el área sin distorsionarse */
+  border-top-left-radius: 10px; /* Redondear esquina superior izquierda */
+  border-top-right-radius: 10px; /* Redondear esquina superior derecha */
+}
+
+.project-card h3 {
+  font-size: 1.3rem;
+  margin: 15px 20px 10px 20px;
+  font-family: "Inter", sans-serif; /* Usar la misma fuente para los encabezados */
+  color: #ffffff; /* Asegurarse de que los títulos sean blancos */
+}
+
+.project-card p {
+  font-size: 1rem;
+  margin: 0 20px 15px 20px;
+  color: #aaaaaa; /* Color de texto para la descripción */
+}
+
+.project-card .project-links {
+  margin: 0 20px;
+  margin-top: 15px; /* Añadir espacio arriba de los enlaces */
+}
+
+.project-card .project-links a {
+  display: inline-block;
+  margin-right: 20px; /* Espacio entre los enlaces de GitHub y Demo */
+  color: #007bff; /* Color de los enlaces, ajusta si es necesario para que coincida con la imagen */
+  text-decoration: none;
+  display: inline-flex; /* Para alinear icono y texto */
+  align-items: center;
+}
+
+.project-card .project-links a i {
+  margin-right: 8px; /* Espacio entre el icono y el texto */
+}
+
+.project-card .project-links a:hover {
+  text-decoration: underline;
+}
+
+.project-icons {
+  margin: 15px 20px; /* Espacio alrededor de los iconos de tecnología en la tarjeta */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Espacio entre los iconos */
+}
+
+.project-icons i {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px; /* Tamaño del círculo, ajusta si es necesario */
+  height: 30px; /* Tamaño del círculo, debe ser igual al ancho */
+  border-radius: 50%; /* Para hacer el círculo */
+  background-color: #2a2a3e; /* Color de fondo de los círculos */
+  color: #ffffff; /* Color del icono */
+  font-size: 1.2rem; /* Tamaño del icono dentro del círculo */
+}
+
+#contact {
+  padding: 100px 0;
+  background-color: var(--background-light);
+  position: relative;
+  overflow: hidden;
+}
+
+#contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+}
+
+#contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#contact p {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+#contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: var(--card-background);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid var(--background-light);
+  border-radius: 8px;
+  background-color: var(--background-dark);
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: all var(--transition-speed) ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+#contact-form button {
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#contact-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.contact-info {
+  margin-top: 40px;
+  text-align: center; /* Centrar la información de contacto */
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #ffffff; /* Color del texto */
+  display: flex; /* Para alinear el icono y el texto */
+  align-items: center;
+  justify-content: center; /* Centrar el contenido del párrafo */
+  gap: 10px; /* Espacio entre icono y texto */
+}
+
+.contact-info p i.fas {
+  margin-right: 10px; /* Espacio entre el icono y el texto en la info de contacto */
+}
+
+.contact-info .social-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center; /* Centrar los iconos de redes sociales */
+  gap: 20px; /* Espacio entre los iconos */
+}
+
+.contact-info .social-links a {
+  color: #ffffff; /* Color de los iconos */
+  font-size: 1.5rem; /* Tamaño de los iconos */
+  text-decoration: none;
+}
+
+.contact-info .social-links a:hover {
+  color: #007bff; /* Color al pasar el ratón */
+}
+
+.contact-info .social-links a i.fab,
+.contact-info .social-links a i.fas {
+  font-size: 1.5rem; /* Tamaño de los iconos en la info de contacto */
+  color: #ffffff; /* Color de los iconos en la info de contacto */
+  transition: color 0.3s ease;
+}
+
+.contact-info .social-links a:hover i.fab,
+.contact-info .social-links a:hover i.fas {
+  color: #007bff; /* Color al pasar el ratón en la info de contacto */
+}
